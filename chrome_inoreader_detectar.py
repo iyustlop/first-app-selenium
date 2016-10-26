@@ -17,14 +17,14 @@ def main():
 	driver=webdriver.Chrome(usuario.getDriver())
 
 	if (str(sys.argv[2]) == ''):
-		print ('error_2: seleccionar opcion de visualizacion')
+		logging.error ('error_2: seleccionar opcion de visualizacion')
 		sys.exit()
 	elif (str(sys.argv[2]) == 'h'):
 		driver.set_window_size(960, 1080)
 	elif (str(sys.argv[2]) == 'm'):
 		driver.maximize_window()
 	else:
-		print ('error_1: seleccionar opcion de visualizacion correcta')
+		logging.error ('error_1: seleccionar opcion de visualizacion correcta')
 		sys.exit()
 
 	#voy a Inoreader y pincho el enlace 
