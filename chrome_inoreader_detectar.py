@@ -3,7 +3,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from login.log_google import loggin_google
-from webs.inoreader import landingInInoreader
+from webs.webs import landingInInoreader
 from user.user import myUser
 import time
 import sys
