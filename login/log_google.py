@@ -13,7 +13,7 @@ def loggin_google (driver,usuario,password):
 	contrasena=driver.find_element_by_id('Passwd')
 	
 	wait = WebDriverWait(driver, 20)
-	contrasena.clear()
+	#contrasena.clear()
 	contrasena.send_keys(password)
 
 	next=driver.find_element_by_id('signIn')
