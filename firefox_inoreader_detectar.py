@@ -14,7 +14,7 @@ def main():
 	usuario = myUser()
 
 	driver = webdriver.Firefox()
-	driver.maximize_window() 
+	driver.maximize_window()
 
 	if (str(sys.argv[2]) == ''):
 		logging.error ('error_2: seleccionar opcion de visualizacion')
@@ -27,9 +27,9 @@ def main():
 		logging.error ('error_1: seleccionar opcion de visualizacion correcta')
 		sys.exit()
 
-	#voy a Inoreader y pincho el enlace 
+	#voy a Inoreader y pincho el enlace
 	landingInInoreader(driver)
-	
+
 	driver.implicitly_wait(20) #//gives an implicit wait for 20 seconds
 
 	#me logueo en google.
@@ -45,7 +45,7 @@ def main():
 
 	driver.implicitly_wait(20) #//gives an implicit wait for 20 seconds
 
-	#Selecciono mis articulos 
+	#Selecciono mis articulos
 	my_articles=driver.find_element_by_xpath('//*[@id="reader_pane"]/div[1]/div[1]/div[1]')
 	my_articles.click()
 
@@ -64,13 +64,13 @@ def main():
 		try:
 			while True:
 				lectura.send_keys("j")
-				if (str(sys.argv[3]) == 's'):
+				if (str(sys.argv[1]) == 's'):
 					driver.implicitly_wait(10) #//gives an implicit wait for 20 seconds
 				else:
 					driver.implicitly_wait(1) #//gives an implicit wait for 20 seconds
 				#fecha = driver.find_element_by_class_name('header_date').text
 				#print(fecha)
-				time.sleep(float(sys.argv[1]))
+				time.sleep(float(sys.argv[3]))
 		except Exception as e:
 			logging.error ('force close the browser')
 			driver.quit()
@@ -78,10 +78,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
