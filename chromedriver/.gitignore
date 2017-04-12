@@ -1,2 +1,4 @@
 /chromedriver
 /chromedriver_old
+/geckodriver
+/geckodriver-v0.15.0-linux64.tar.gz

@@ -13,7 +13,9 @@ import logging
 def main():
 	usuario = myUser()
 
-	driver = webdriver.Firefox()
+
+	driver = webdriver.Firefox(executable_path='/home/sobremesa/Documentos/first-app-selenium/chromedriver/geckodriver')
+
 	driver.maximize_window()
 
 	if (str(sys.argv[2]) == ''):
@@ -72,7 +74,7 @@ def main():
 				#print(fecha)
 				time.sleep(float(sys.argv[3]))
 		except Exception as e:
-			logging.error ('force close the browser')
+			logging.error (e)
 			driver.quit()
 			sys.exit()
 
