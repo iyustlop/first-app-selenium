@@ -4,22 +4,22 @@ import logging
 from time import sleep
 
 def loggin_google (driver,usuario,password):
-	user=driver.find_element_by_id('Email')
+	user=driver.find_element_by_id('identifierId')
 	user.clear()
 	user.send_keys(usuario)
 
-	next=driver.find_element_by_id('next')
+	next=driver.find_element_by_id('identifierNext')
 	next.click()
 	logging.info(usuario)
 
 	sleep( 1 )
 	wait = WebDriverWait(driver, 20)
 	driver.implicitly_wait(20) #//gives an implicit wait for 20 seconds
-	contrasena=driver.find_element_by_id('Passwd')
+	contrasena=driver.find_element_by_xpath('//*[@id="password"]/div[1]/div/div[1]/input')
 
 	wait = WebDriverWait(driver, 20)
 	#contrasena.clear()
 	contrasena.send_keys(password)
 
-	next=driver.find_element_by_id('signIn')
+	next=driver.find_element_by_id('passwordNext')
 	next.click()
