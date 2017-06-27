@@ -14,7 +14,7 @@ def main():
     logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s')
     usuario = myUser()
 
-    logging.info(usuario.getDriver())
+    logging.info(usuario.getDriver)
     driver = webdriver.Chrome(usuario.getDriver())
 
     if str(sys.argv[2]) == '':

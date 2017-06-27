@@ -14,8 +14,8 @@ def main():
     logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s')
     usuario = myUser()
 
-    logging.info(usuario.getDriver())
-    driver = webdriver.Chrome(usuario.getDriver())
+    logging.info(usuario.getDriver)
+    driver = webdriver.Chrome(usuario.getDriver)
 
     if str(sys.argv[2]) == '':
         logging.error('error_2: seleccionar opcion de visualizacion')
@@ -35,9 +35,9 @@ def main():
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
 
     # me logueo en google.
-    logging.info('%s before you %s', usuario.getUser(), usuario.getPassword())
+    logging.info('%s before you %s', usuario.getUser, usuario.getPassword)
 
-    loggin_google(driver, usuario.getUser(), usuario.getPassword())
+    loggin_google(driver, usuario.getUser, usuario.getPassword)
 
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
 

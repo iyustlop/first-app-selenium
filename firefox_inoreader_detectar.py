@@ -37,7 +37,7 @@ def main():
 	#me logueo en google.
 	#logging.info('%s before you %s', usuario.getUser(), usuario.getPassword())
 
-	loggin_google (driver,usuario.getUser(),usuario.getPassword())
+	loggin_google (driver, usuario.getUser, usuario.getPassword)
 
 	driver.implicitly_wait(20) #//gives an implicit wait for 20 seconds
 
