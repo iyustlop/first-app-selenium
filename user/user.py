@@ -1,19 +1,20 @@
 import os
 from configparser import ConfigParser
 
-class myUser:
+
+class MyUser:
 
     def __init__(self):
         self.parser = ConfigParser()
         self.parser.read('/home/sobremesa/Documentos/first-app-selenium/user/example.cfg')
 
-    def getUser(self):
+    def user(self):
         return self.parser.get('DEFAULT', 'email')
 
-    def getPassword(self):
+    def password(self):
         return self.parser.get('DEFAULT', 'psw')
 
-    def getDriver(self):
+    def driver(self):
         return self.parser.get('DEFAULT', 'driver')
 
 

@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from login.log_google import loggin_google
 from webs.inoreader import landingInInoreader
-from user.user import myUser
+from user.user import MyUser
 import time
 import sys
 import logging
@@ -12,10 +12,10 @@ import logging
 
 def main():
     logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s')
-    usuario = myUser()
+    usuario = MyUser()
 
-    logging.info(usuario.getDriver)
-    driver = webdriver.Chrome(usuario.getDriver())
+    logging.info(usuario.driver())
+    driver = webdriver.Chrome(usuario.driver())
 
     if str(sys.argv[2]) == '':
         logging.error('error_2: seleccionar opcion de visualizacion')
@@ -35,9 +35,9 @@ def main():
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
 
     # me logueo en google.
-    logging.info('%s before you %s', usuario.getUser(), usuario.getPassword())
+    logging.info('%s before you %s', usuario.user(), usuario.password())
 
-    loggin_google(driver, usuario.getUser(), usuario.getPassword())
+    loggin_google(driver, usuario.user(), usuario.password())
 
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
 
@@ -77,6 +77,7 @@ def main():
             logging.error('%s force close the browser', e)
             driver.quit()
             sys.exit()
+        return
 
 
 if __name__ == '__main__':
