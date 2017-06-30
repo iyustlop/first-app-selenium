@@ -2,6 +2,7 @@
 *.pyc
 *.log
 *.gz
+*.cfg
 /__pycache__/
 .idea/
 chromedriver/
