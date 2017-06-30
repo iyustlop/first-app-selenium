@@ -1,6 +1,6 @@
-/*.py~
-/*.pyc
-/*.log
+*.py~
+*.pyc
+*.log
 /__pycache__/
 /.idea/
 /ChromeDriver/
