@@ -1,7 +1,8 @@
 *.py~
 *.pyc
 *.log
+*.gz
 /__pycache__/
-/.idea/
-/ChromeDriver/
+.idea/
+chromedriver/
 
