@@ -2,7 +2,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from login.log_google import loggin_google
+from login.log_google import loggin_google_theoldreader
 from webs.theoldreader import landingInTheoldreader
 from user.user import MyUser
 import time
@@ -37,7 +37,7 @@ def main():
     # me logueo en google.
     logging.info('%s before you %s', usuario.user(), usuario.password())
 
-    loggin_google(driver, usuario.user(), usuario.password())
+    loggin_google_theoldreader(driver, usuario.user(), usuario.password())
 
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
 

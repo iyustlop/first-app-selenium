@@ -24,3 +24,18 @@ def loggin_google(driver, usuario, password):
 
     next = driver.find_element_by_id('passwordNext')
     next.click()
+
+
+def loggin_google_theoldreader(driver, usuario, password):
+    user = driver.find_element_by_id("user_login")
+    user.clear()
+    user.send_keys(usuario)
+
+    driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
+    contrasena = driver.find_element_by_id("user_password")
+
+    contrasena.clear()
+    contrasena.send_keys(password)
+
+    next = driver.find_element_by_xpath('//input[@type="submit"]')
+    next.click()

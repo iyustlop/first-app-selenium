@@ -1,11 +1,19 @@
-#landing in Inoreader and clicking the signIn
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# landing in Inoreader and clicking the signIn
+
+button = "/html/body/div[2]/div/div/div/div/div/a[2]"
 
 def landingInTheoldreader(driver):
-	driver.get("http://www.theoldreader.com")
+    driver.get("http://www.theoldreader.com")
 
-	link = driver.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[1]/div[1]/div/a[2]/i')
-	NewWindow = link.click()
+    wait = WebDriverWait(driver, 10)
 
-#   No es necesario, va directo a la pagina de google
-#	googleButton = driver.find_element_by_xpath('//*[@id="landing_signin_form"]/div[3]/div[2]/button[2]')
-#	googleButton.click()
+    user = wait.until(EC.visibility_of_element_located((By.XPATH, button)))
+
+    link = driver.find_element_by_xpath(button)
+    newwindow = link.click()
+
