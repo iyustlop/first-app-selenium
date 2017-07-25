@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from login.log_google import loggin_google_theoldreader
 from webs.theoldreader import landingInTheoldreader
 from user.user import MyUser
-import time
 import sys
 import logging
 
@@ -44,10 +42,6 @@ def main():
     panel = driver.get("https://theoldreader.com/posts/all")
 
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
-
-    articulos = panel.find_element_by_xpath('//*[@id="post*"]').click
-
-    articulos.send_keys("j")
 
 if __name__ == '__main__':
     main()
