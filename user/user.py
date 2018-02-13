@@ -1,13 +1,17 @@
-import os
+from configparser import ConfigParser
 
-class myUser:
-	
-	def getUser(self):
-		return os.environ['usuario']
 
-	def getPassword(self):
-		return os.environ['contrasena']
+class MyUser:
 
-	def getDriver(self):
-		return os.environ['mydriver']
-	
+    def __init__(self):
+        self.parser = ConfigParser()
+        self.parser.read('example.ini')
+
+    def user(self):
+        return self.parser.get('login', 'email')
+
+    def password(self):
+        return self.parser.get('login', 'psw')
+
+    def driver(self):
+        return self.parser.get('login', 'driver')
