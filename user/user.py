@@ -8,10 +8,10 @@ class MyUser:
         self.parser.read('example.ini')
 
     def user(self):
-        return self.parser.get("DEFAULT", 'email')
+        return self.parser.get('login', 'email')
 
     def password(self):
-        return self.parser.get("DEFAULT", 'psw')
+        return self.parser.get('login', 'psw')
 
     def driver(self):
-        return self.parser.get('DEFAULT', 'driver')
+        return self.parser.get('login', 'driver')
