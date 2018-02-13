@@ -15,13 +15,10 @@ def loggin_google(driver, usuario, password):
 
     driver.implicitly_wait(20)  # //gives an implicit wait for 20 seconds
     contrasena = driver.find_element_by_xpath('//*[@id="password"]/div[1]/div/div[1]/input')
-
-    driver.implicitly_wait(20)
     contrasena.send_keys(password)
 
-    next = driver.find_element_by_id('passwordNext')
-    driver.implicitly_wait(20)
-    next.click()
+    next2 = driver.find_element_by_id('passwordNext')
+    next2.click()
 
 
 def loggin_google_theoldreader(driver, usuario, password):
