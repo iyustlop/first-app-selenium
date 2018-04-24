@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 button = "/html/body/div[2]/div/div/div/div/div/a[2]"
 
+
 def landingInTheoldreader(driver):
     driver.get("http://www.theoldreader.com")
 

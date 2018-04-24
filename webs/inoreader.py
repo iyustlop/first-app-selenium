@@ -1,5 +1,6 @@
 #landing in Inoreader and clicking the signIn
 
+
 def landingInInoreader(driver):
     driver.get("http://www.inoreader.com")
 
